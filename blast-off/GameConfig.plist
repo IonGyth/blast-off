@@ -6,8 +6,12 @@
 	<dict>
 		<key>Launch</key>
 		<dict>
+			<key>Name</key>
+			<string>Launch</string>
 			<key>50km</key>
 			<dict>
+				<key>Name</key>
+				<string>50km</string>
 				<key>Cost</key>
 				<integer>100</integer>
 				<key>Research</key>
@@ -17,6 +21,8 @@
 			</dict>
 			<key>100km</key>
 			<dict>
+				<key>Name</key>
+				<string>100km</string>
 				<key>Cost</key>
 				<integer>100</integer>
 				<key>Research</key>
@@ -26,6 +32,8 @@
 			</dict>
 			<key>150km</key>
 			<dict>
+				<key>Name</key>
+				<string>150km</string>
 				<key>Cost</key>
 				<integer>100</integer>
 				<key>Research</key>
@@ -36,10 +44,14 @@
 		</dict>
 		<key>Flyby</key>
 		<dict>
+			<key>Name</key>
+			<string>Flyby</string>
 			<key>Comet</key>
 			<dict>
+				<key>Name</key>
+				<string>Comet</string>
 				<key>Cost</key>
-				<integer>1000</integer>
+				<real>1000</real>
 				<key>Research</key>
 				<integer>1150</integer>
 				<key>Difficulty</key>
@@ -47,6 +59,8 @@
 			</dict>
 			<key>Earth</key>
 			<dict>
+				<key>Name</key>
+				<string>Earth</string>
 				<key>Cost</key>
 				<integer>150</integer>
 				<key>Research</key>
@@ -56,6 +70,8 @@
 			</dict>
 			<key>Earth&apos;s Moon</key>
 			<dict>
+				<key>Name</key>
+				<string>Earth&apos;s Moon</string>
 				<key>Cost</key>
 				<integer>250</integer>
 				<key>Research</key>
@@ -65,6 +81,8 @@
 			</dict>
 			<key>Mars</key>
 			<dict>
+				<key>Name</key>
+				<string>Mars</string>
 				<key>Cost</key>
 				<integer>300</integer>
 				<key>Research</key>
@@ -74,6 +92,8 @@
 			</dict>
 			<key>Venus</key>
 			<dict>
+				<key>Name</key>
+				<string>Venus</string>
 				<key>Cost</key>
 				<integer>300</integer>
 				<key>Research</key>
@@ -83,6 +103,8 @@
 			</dict>
 			<key>Sun</key>
 			<dict>
+				<key>Name</key>
+				<string>Sun</string>
 				<key>Cost</key>
 				<integer>300</integer>
 				<key>Research</key>
@@ -93,8 +115,12 @@
 		</dict>
 		<key>Orbit</key>
 		<dict>
+			<key>Name</key>
+			<string>Orbit</string>
 			<key>Earth</key>
 			<dict>
+				<key>Name</key>
+				<string>Earth</string>
 				<key>Cost</key>
 				<integer>175</integer>
 				<key>Research</key>
@@ -104,6 +130,8 @@
 			</dict>
 			<key>Mars</key>
 			<dict>
+				<key>Name</key>
+				<string>Mars</string>
 				<key>Cost</key>
 				<integer>500</integer>
 				<key>Research</key>
@@ -113,6 +141,8 @@
 			</dict>
 			<key>Venus</key>
 			<dict>
+				<key>Name</key>
+				<string>Venus</string>
 				<key>Cost</key>
 				<integer>600</integer>
 				<key>Research</key>
@@ -122,6 +152,8 @@
 			</dict>
 			<key>Comet</key>
 			<dict>
+				<key>Name</key>
+				<string>Comet</string>
 				<key>Cost</key>
 				<real>12000</real>
 				<key>Research</key>
@@ -132,8 +164,12 @@
 		</dict>
 		<key>Lander</key>
 		<dict>
+			<key>Name</key>
+			<string>Lander</string>
 			<key>Mars</key>
 			<dict>
+				<key>Name</key>
+				<string>Mars</string>
 				<key>Cost</key>
 				<integer>300</integer>
 				<key>Research</key>
@@ -143,6 +179,8 @@
 			</dict>
 			<key>Earth&apos;s Moon</key>
 			<dict>
+				<key>Name</key>
+				<string>Earth&apos;s Moon</string>
 				<key>Cost</key>
 				<integer>250</integer>
 				<key>Research</key>
@@ -152,6 +190,8 @@
 			</dict>
 			<key>Venus</key>
 			<dict>
+				<key>Name</key>
+				<string>Venus</string>
 				<key>Cost</key>
 				<integer>300</integer>
 				<key>Research</key>
@@ -161,6 +201,8 @@
 			</dict>
 			<key>Comet</key>
 			<dict>
+				<key>Name</key>
+				<string>Comet</string>
 				<key>Cost</key>
 				<real>15000</real>
 				<key>Research</key>
@@ -171,8 +213,12 @@
 		</dict>
 		<key>Rover</key>
 		<dict>
+			<key>Name</key>
+			<string>Rover</string>
 			<key>Earth&apos;s Moon</key>
 			<dict>
+				<key>Name</key>
+				<string>Earth&apos;s Moon</string>
 				<key>Cost</key>
 				<integer>250</integer>
 				<key>Research</key>
@@ -182,6 +228,8 @@
 			</dict>
 			<key>Mars</key>
 			<dict>
+				<key>Name</key>
+				<string>Mars</string>
 				<key>Cost</key>
 				<integer>300</integer>
 				<key>Research</key>
@@ -191,6 +239,8 @@
 			</dict>
 			<key>Comet</key>
 			<dict>
+				<key>Name</key>
+				<string>Comet</string>
 				<key>Cost</key>
 				<real>15000</real>
 				<key>Research</key>
@@ -201,8 +251,12 @@
 		</dict>
 		<key>Man on Planet</key>
 		<dict>
+			<key>Name</key>
+			<string>Man on Planet</string>
 			<key>Earth&apos;s Moon</key>
 			<dict>
+				<key>Name</key>
+				<string>Earth&apos;s Moon</string>
 				<key>Cost</key>
 				<integer>250</integer>
 				<key>Research</key>
@@ -212,6 +266,8 @@
 			</dict>
 			<key>Mars</key>
 			<dict>
+				<key>Name</key>
+				<string>Mars</string>
 				<key>Cost</key>
 				<integer>300</integer>
 				<key>Research</key>
@@ -221,6 +277,8 @@
 			</dict>
 			<key>Comet</key>
 			<dict>
+				<key>Name</key>
+				<string>Comet</string>
 				<key>Cost</key>
 				<real>15000</real>
 				<key>Research</key>

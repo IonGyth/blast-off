@@ -10,9 +10,24 @@ import UIKit
 
 class MissionTableViewController: UITableViewController {
 
+    var missions = [Int: String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let path = NSBundle.mainBundle().pathForResource("GameConfig", ofType: "plist") {
+            if let dict = NSDictionary(contentsOfFile: path) as? Dictionary<String, AnyObject> {
+                // use swift dictionary as normal
+                println(dict)
+                println("-------Mission Types------")
+                println(dict["Missions"]?["Name"]?)
+                println("-------Mission Actual------")
+                for values in dict.keys{
+                    println(values)
+                }
+            }
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,7 +45,7 @@ class MissionTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

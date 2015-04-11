@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE6C36A01AD9644900841C75 /* MissionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6C369F1AD9644900841C75 /* MissionTableViewController.swift */; };
-		AE6C36A71AD9695000841C75 /* Missions.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE6C36A61AD9695000841C75 /* Missions.plist */; };
+		AE6C36A71AD9695000841C75 /* GameConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE6C36A61AD9695000841C75 /* GameConfig.plist */; };
 		AEC0F6241AD94DB200DDA0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC0F6231AD94DB200DDA0E7 /* AppDelegate.swift */; };
 		AEC0F6261AD94DB200DDA0E7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC0F6251AD94DB200DDA0E7 /* FirstViewController.swift */; };
 		AEC0F62B1AD94DB200DDA0E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC0F6291AD94DB200DDA0E7 /* Main.storyboard */; };
@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		AE6C369F1AD9644900841C75 /* MissionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionTableViewController.swift; sourceTree = "<group>"; };
-		AE6C36A61AD9695000841C75 /* Missions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Missions.plist; sourceTree = "<group>"; };
+		AE6C36A61AD9695000841C75 /* GameConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameConfig.plist; sourceTree = "<group>"; };
 		AEC0F61E1AD94DB200DDA0E7 /* blast-off.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "blast-off.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC0F6221AD94DB200DDA0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEC0F6231AD94DB200DDA0E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 				AEC0F62E1AD94DB200DDA0E7 /* LaunchScreen.xib */,
 				AEC0F6211AD94DB200DDA0E7 /* Supporting Files */,
 				AE6C369F1AD9644900841C75 /* MissionTableViewController.swift */,
-				AE6C36A61AD9695000841C75 /* Missions.plist */,
+				AE6C36A61AD9695000841C75 /* GameConfig.plist */,
 			);
 			path = "blast-off";
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEC0F62B1AD94DB200DDA0E7 /* Main.storyboard in Resources */,
-				AE6C36A71AD9695000841C75 /* Missions.plist in Resources */,
+				AE6C36A71AD9695000841C75 /* GameConfig.plist in Resources */,
 				AEC0F6301AD94DB200DDA0E7 /* LaunchScreen.xib in Resources */,
 				AEC0F62D1AD94DB200DDA0E7 /* Images.xcassets in Resources */,
 			);
