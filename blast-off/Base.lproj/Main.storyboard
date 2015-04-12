@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="slkscr.ttf">
@@ -12,23 +11,26 @@
             <string>Silkscreen</string>
             <string>Silkscreen</string>
             <string>Silkscreen</string>
+            <string>Silkscreen</string>
+            <string>Silkscreen</string>
+            <string>Silkscreen</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--First View Controller-->
+        <!--FirstViewController-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="blast_off" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FirstViewController" id="9pv-A4-QxB" customClass="FirstViewController" customModule="blast_off" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBa-Mt-NAG">
-                                <rect key="frame" x="218" y="320" width="164" height="77"/>
+                                <rect key="frame" x="78" y="275" width="164" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kBa-Mt-NAG" secondAttribute="height" multiplier="47:22" id="SbW-MM-YuA"/>
                                 </constraints>
@@ -41,7 +43,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Blast Off!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m1-lX-9wb">
-                                <rect key="frame" x="136" y="124" width="329" height="211"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="205"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7m1-lX-9wb" secondAttribute="height" multiplier="286:183" id="ese-4v-glw"/>
                                 </constraints>
@@ -51,89 +53,125 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.23855304405905187" green="1" blue="0.25667570291541297" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="7m1-lX-9wb" secondAttribute="centerX" constant="-11" id="Ez3-6e-CaG"/>
-                            <constraint firstAttribute="centerX" secondItem="kBa-Mt-NAG" secondAttribute="centerX" id="qwU-mr-2y5"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Dej-Mc-7iL"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="-242"/>
+            <point key="canvasLocation" x="762.5" y="-246"/>
         </scene>
-        <!--View Controller-->
+        <!--Mission Summary View Controller-->
         <scene sceneID="abS-d4-Tpo">
             <objects>
-                <viewController id="c5C-5D-ypD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MissionSummaryViewController" id="c5C-5D-ypD" customClass="MissionSummaryViewController" customModule="blast_off" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dkC-67-7qj"/>
                         <viewControllerLayoutGuide type="bottom" id="boF-BC-Dhq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="T8v-bd-udp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$ Mission Name $" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4d-cL-Ef5">
-                                <rect key="frame" x="278" y="20" width="277" height="126"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0P-9j-ZRu">
+                                <rect key="frame" x="16" y="72" width="100" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mission Name" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4d-cL-Ef5">
+                                <rect key="frame" x="124" y="72" width="181" height="72"/>
+                                <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money_pixilated" translatesAutoresizingMaskIntoConstraints="NO" id="l38-oh-oSu">
+                                <rect key="frame" x="130" y="143" width="29" height="29"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="research_pixilated" translatesAutoresizingMaskIntoConstraints="NO" id="uot-8V-M7U">
+                                <rect key="frame" x="225" y="142" width="29" height="29"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JC-EB-5vZ">
+                                <rect key="frame" x="163" y="139" width="55" height="32"/>
+                                <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-st-4GJ">
+                                <rect key="frame" x="260" y="140" width="55" height="32"/>
+                                <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="27" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="B28-RK-KZg">
+                                <rect key="frame" x="16" y="191" width="288" height="357"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="27" id="fxj-yP-YxS">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fxj-yP-YxS" id="LPX-BT-BFq">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="costLabel" destination="8JC-EB-5vZ" id="vEC-V8-plE"/>
+                        <outlet property="missionNameLabel" destination="r4d-cL-Ef5" id="5es-xB-euU"/>
+                        <outlet property="researchLabel" destination="fhh-st-4GJ" id="cFy-Q7-tkR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ap5-RA-32w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1508" y="383"/>
+            <point key="canvasLocation" x="1236" y="513"/>
         </scene>
         <!--Mission View Controller-->
         <scene sceneID="zdE-a4-DuB">
             <objects>
                 <tableViewController title="Mission View Controller" id="EjV-jm-NHf" customClass="MissionTableViewController" customModule="blast_off" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="35" sectionHeaderHeight="22" sectionFooterHeight="22" id="wqz-u2-YdO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MissionTypeCell" rowHeight="35" id="JcW-VV-uj0">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MissionTypeCell" rowHeight="35" id="JcW-VV-uj0" customClass="MissionCustomCellTableViewCell" customModule="blast_off" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JcW-VV-uj0" id="cx9-CT-FI3">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tB-ih-NNk">
-                                            <rect key="frame" x="22" y="0.0" width="282" height="32"/>
+                                            <rect key="frame" x="8" y="2" width="148" height="32"/>
                                             <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x9S-GX-fVE">
-                                            <rect key="frame" x="344" y="3" width="29" height="29"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money_pixilated" translatesAutoresizingMaskIntoConstraints="NO" id="x9S-GX-fVE">
+                                            <rect key="frame" x="157" y="1" width="30" height="30"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOj-VS-QqV">
-                                            <rect key="frame" x="469" y="2" width="29" height="29"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1B-3S-QaC">
+                                            <rect key="frame" x="189" y="0.0" width="55" height="32"/>
+                                            <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaN-nh-Skd">
+                                            <rect key="frame" x="273" y="0.0" width="55" height="32"/>
+                                            <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="research_pixilated" translatesAutoresizingMaskIntoConstraints="NO" id="SOj-VS-QqV">
+                                            <rect key="frame" x="240" y="1" width="30" height="30"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1B-3S-QaC">
-                                            <rect key="frame" x="388" y="0.0" width="55" height="32"/>
-                                            <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaN-nh-Skd">
-                                            <rect key="frame" x="514" y="0.0" width="55" height="32"/>
-                                            <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="TaN-nh-Skd" firstAttribute="leading" secondItem="SOj-VS-QqV" secondAttribute="trailing" constant="16" id="0jy-cx-B8S"/>
-                                        <constraint firstItem="SOj-VS-QqV" firstAttribute="leading" secondItem="y1B-3S-QaC" secondAttribute="trailing" constant="31" id="25S-dX-Q8f"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="TaN-nh-Skd" secondAttribute="trailing" constant="31" id="Zcp-dz-lEQ"/>
-                                        <constraint firstItem="y1B-3S-QaC" firstAttribute="leading" secondItem="x9S-GX-fVE" secondAttribute="trailing" constant="16" id="dF7-bi-d8Y"/>
-                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="costLabel" destination="y1B-3S-QaC" id="2lR-07-iq6"/>
+                                    <outlet property="missionLabel" destination="5tB-ih-NNk" id="EHo-6p-1q9"/>
+                                    <outlet property="resourceLabel" destination="TaN-nh-Skd" id="hoj-N1-yRs"/>
+                                    <segue destination="c5C-5D-ypD" kind="show" id="Ukp-3y-zq4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -141,13 +179,15 @@
                             <outlet property="delegate" destination="EjV-jm-NHf" id="uhv-0T-VKm"/>
                         </connections>
                     </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="myTableView" destination="wqz-u2-YdO" id="IH5-5k-KDw"/>
                         <outlet property="view" destination="wqz-u2-YdO" id="mR4-X3-ffX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBt-Ml-4ue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="510"/>
+            <point key="canvasLocation" x="758" y="508"/>
         </scene>
         <!--First-->
         <scene sceneID="5uS-MI-RB2">
@@ -171,5 +211,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="money_pixilated" width="30" height="30"/>
+        <image name="research_pixilated" width="30" height="30"/>
     </resources>
 </document>

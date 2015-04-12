@@ -10,6 +10,8 @@ import UIKit
 
 class MissionTableViewController: UITableViewController {
 
+    @IBOutlet var myTableView: UITableView!
+    
     var table_missions = [String]()
     
     var Missions: [Mission] = [Mission]()
@@ -61,16 +63,42 @@ class MissionTableViewController: UITableViewController {
         //let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
+        let cell = tableView.dequeueReusableCellWithIdentifier("MissionTypeCell", forIndexPath: indexPath) as? MissionCustomCellTableViewCell
+        
+        //var cell:MissionCustomCellTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as MissionCustomCellTableViewCell
+        
+        let singleMission = Missions[indexPath.row]
 
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
-        
-        cell.Mission_label?.text = self.table_missions[indexPath.row]
-        
-        return cell
+        println(singleMission.Name)
+        println(singleMission.Cost)
+        println(singleMission.Research)
+        cell!.setCell(singleMission.Name, costLabelText: singleMission.Cost, resourceLabelText: singleMission.Research)
+        return cell!
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let singleMission = Missions[indexPath.row]
+//        var missionSummaryViewController: MissionSummaryViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MissionSummaryViewController") as MissionSummaryViewController
+//        
+//        missionSummaryViewController.missionNameString = singleMission.Name
+//        missionSummaryViewController.costInt = singleMission.Cost
+//        missionSummaryViewController.researchInt = singleMission.Research
+//        
+//        self.presentViewController(missionSummaryViewController, animated: true, completion: nil)
+//        
+//        println("You selected cell #\(indexPath.row)!")
+//    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var missionSummaryViewController: MissionSummaryViewController = segue.destinationViewController as MissionSummaryViewController
+        
+        let singleMission = Missions[self.tableView.indexPathForSelectedRow()!.row]
+            
+            //self.tableView.indexPathForSelectedRow().row]
+        
+        missionSummaryViewController.missionNameString = singleMission.Name
+        missionSummaryViewController.costInt = singleMission.Cost
+        missionSummaryViewController.researchInt = singleMission.Research
     }
     
     /*

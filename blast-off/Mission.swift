@@ -16,8 +16,8 @@ class Mission{
     var Research = 0
     
     init(Name: String, Category: String, Cost: Int, Research: Int){
-        self.Name = "Name"
-        self.Category = "Category"
+        self.Name = Name
+        self.Category = Category
         self.Cost = Cost
         self.Research = Research
     }

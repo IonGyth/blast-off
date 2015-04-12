@@ -11,6 +11,7 @@
 		AE6C36A71AD9695000841C75 /* GameConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE6C36A61AD9695000841C75 /* GameConfig.plist */; };
 		AE6E494D1AD9F2A2005285B3 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E494C1AD9F2A2005285B3 /* Mission.swift */; };
 		AE6E494F1AD9F8A2005285B3 /* MissionCustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E494E1AD9F8A1005285B3 /* MissionCustomCellTableViewCell.swift */; };
+		AE6E49511ADA1185005285B3 /* MissionSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E49501ADA1184005285B3 /* MissionSummaryViewController.swift */; };
 		AE75A04F1AD9DDCF006372A9 /* slkscr.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE75A04E1AD9DDCF006372A9 /* slkscr.ttf */; };
 		AEC0F6241AD94DB200DDA0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC0F6231AD94DB200DDA0E7 /* AppDelegate.swift */; };
 		AEC0F6261AD94DB200DDA0E7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC0F6251AD94DB200DDA0E7 /* FirstViewController.swift */; };
@@ -35,6 +36,7 @@
 		AE6C36A61AD9695000841C75 /* GameConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameConfig.plist; sourceTree = "<group>"; };
 		AE6E494C1AD9F2A2005285B3 /* Mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		AE6E494E1AD9F8A1005285B3 /* MissionCustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionCustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		AE6E49501ADA1184005285B3 /* MissionSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionSummaryViewController.swift; sourceTree = "<group>"; };
 		AE75A04E1AD9DDCF006372A9 /* slkscr.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slkscr.ttf; sourceTree = "<group>"; };
 		AEC0F61E1AD94DB200DDA0E7 /* blast-off.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "blast-off.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC0F6221AD94DB200DDA0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				AE6C369F1AD9644900841C75 /* MissionTableViewController.swift */,
 				AE6C36A61AD9695000841C75 /* GameConfig.plist */,
 				AE6E494C1AD9F2A2005285B3 /* Mission.swift */,
+				AE6E49501ADA1184005285B3 /* MissionSummaryViewController.swift */,
 			);
 			path = "blast-off";
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				AE6C36A01AD9644900841C75 /* MissionTableViewController.swift in Sources */,
 				AE6E494D1AD9F2A2005285B3 /* Mission.swift in Sources */,
 				AE6E494F1AD9F8A2005285B3 /* MissionCustomCellTableViewCell.swift in Sources */,
+				AE6E49511ADA1185005285B3 /* MissionSummaryViewController.swift in Sources */,
 				AEC0F6261AD94DB200DDA0E7 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
