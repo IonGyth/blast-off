@@ -10,23 +10,25 @@ import UIKit
 
 class MissionTableViewController: UITableViewController {
 
-    var missions = [Int: String]()
+    var table_missions = [String]()
+    
+    var Missions: [Mission] = [Mission]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let path = NSBundle.mainBundle().pathForResource("GameConfig", ofType: "plist") {
             if let dict = NSDictionary(contentsOfFile: path) as? Dictionary<String, AnyObject> {
-                // use swift dictionary as normal
-                println(dict)
-                println("-------Mission Types------")
-                println(dict["Missions"]?["Name"]?)
-                println("-------Mission Actual------")
-                for values in dict.keys{
-                    println(values)
+                let missions_types = dict["Missions"]!
+                for (mission_category, missions) in missions_types as Dictionary<String, AnyObject>{
+                    for (mission_name, mission_values) in missions as Dictionary<String, AnyObject>{
+                        Missions.append(Mission(Name: mission_name, Category: mission_category, Cost: mission_values["Cost"]! as Int, Research: mission_values["Research"]! as Int))
+                    }
                 }
             }
         }
+        
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -51,19 +53,26 @@ class MissionTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return Missions.count
     }
 
-    /*
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        //let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
 
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        
+        cell.Mission_label?.text = self.table_missions[indexPath.row]
+        
         return cell
     }
-    */
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("You selected cell #\(indexPath.row)!")
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

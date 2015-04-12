@@ -3,7 +3,17 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="slkscr.ttf">
+            <string>Silkscreen</string>
+            <string>Silkscreen</string>
+            <string>Silkscreen</string>
+            <string>Silkscreen</string>
+            <string>Silkscreen</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
@@ -17,21 +27,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Blast Off!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m1-lX-9wb">
-                                <rect key="frame" x="157" y="101" width="286" height="183"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="7m1-lX-9wb" secondAttribute="height" multiplier="286:183" id="ese-4v-glw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="56"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBa-Mt-NAG">
-                                <rect key="frame" x="253" y="315" width="94" height="44"/>
+                                <rect key="frame" x="218" y="320" width="164" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kBa-Mt-NAG" secondAttribute="height" multiplier="47:22" id="SbW-MM-YuA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="22"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -39,6 +40,15 @@
                                     <segue destination="EjV-jm-NHf" kind="show" id="2eC-uK-8dE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Blast Off!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m1-lX-9wb">
+                                <rect key="frame" x="136" y="124" width="329" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7m1-lX-9wb" secondAttribute="height" multiplier="286:183" id="ese-4v-glw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="41"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.23855304405905187" green="1" blue="0.25667570291541297" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -50,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-316"/>
+            <point key="canvasLocation" x="758" y="-242"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="abS-d4-Tpo">
@@ -82,25 +92,48 @@
         <scene sceneID="zdE-a4-DuB">
             <objects>
                 <tableViewController title="Mission View Controller" id="EjV-jm-NHf" customClass="MissionTableViewController" customModule="blast_off" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="22" sectionFooterHeight="22" id="wqz-u2-YdO">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="35" sectionHeaderHeight="22" sectionFooterHeight="22" id="wqz-u2-YdO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MissionTypeCell" rowHeight="56" id="JcW-VV-uj0">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MissionTypeCell" rowHeight="35" id="JcW-VV-uj0">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JcW-VV-uj0" id="cx9-CT-FI3">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tB-ih-NNk">
+                                            <rect key="frame" x="22" y="0.0" width="282" height="32"/>
+                                            <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x9S-GX-fVE">
+                                            <rect key="frame" x="344" y="3" width="29" height="29"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOj-VS-QqV">
+                                            <rect key="frame" x="469" y="2" width="29" height="29"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1B-3S-QaC">
+                                            <rect key="frame" x="388" y="0.0" width="55" height="32"/>
+                                            <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaN-nh-Skd">
+                                            <rect key="frame" x="514" y="0.0" width="55" height="32"/>
+                                            <fontDescription key="fontDescription" name="Silkscreen" family="Silkscreen" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TaN-nh-Skd" firstAttribute="leading" secondItem="SOj-VS-QqV" secondAttribute="trailing" constant="16" id="0jy-cx-B8S"/>
+                                        <constraint firstItem="SOj-VS-QqV" firstAttribute="leading" secondItem="y1B-3S-QaC" secondAttribute="trailing" constant="31" id="25S-dX-Q8f"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="TaN-nh-Skd" secondAttribute="trailing" constant="31" id="Zcp-dz-lEQ"/>
+                                        <constraint firstItem="y1B-3S-QaC" firstAttribute="leading" secondItem="x9S-GX-fVE" secondAttribute="trailing" constant="16" id="dF7-bi-d8Y"/>
+                                    </constraints>
                                 </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MissionNameCell" rowHeight="56" id="UZe-Xz-kMu">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UZe-Xz-kMu" id="6vq-QV-ML9">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="c5C-5D-ypD" kind="show" id="jYF-NX-w3J"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -108,10 +141,13 @@
                             <outlet property="delegate" destination="EjV-jm-NHf" id="uhv-0T-VKm"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="view" destination="wqz-u2-YdO" id="mR4-X3-ffX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBt-Ml-4ue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="383"/>
+            <point key="canvasLocation" x="758" y="510"/>
         </scene>
         <!--First-->
         <scene sceneID="5uS-MI-RB2">
